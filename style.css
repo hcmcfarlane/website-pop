@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* declare some variables */
+:root {
+    --black: #100e0f;
+    --yellow: #f7d221;
+    --white: #efe5e0;
+    --pink: #db1083;
+    --blue: #15a7e0;
+    --border: 8px solid var(--black);
+    --headheight: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "IBM Plex Sans", Roboto, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 16pt;
+    border: var(--border);
+    width: calc(100vh - (100vh - 100%));
+}
+
+div {
+    border: 1px solid red;
+}
+
+header {
+    width: 100%;
+    height: var(--headheight);
+    display: inline-grid;
+    grid-template-columns: var(--headheight) 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    text-align: left;
+}
+
+header > div {
+    border: var(--border);
+    vertical-align: middle;
+    display:flex;
+    align-items: left;
+    justify-content: center;
+}
+
