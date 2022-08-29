@@ -1,47 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "./header.css";
+@import "./info.css";
+@import "./contact.css";
+@import "./mond.css";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* declare some variables */
 :root {
-    --black: #100e0f;
-    --yellow: #f7d221;
-    --white: #efe5e0;
-    --pink: #db1083;
-    --blue: #15a7e0;
-    --border: 8px solid var(--black);
-    --headheight: 100px;
+	--black: #100e0f;
+	--yellow: #f7d221;
+	--white: #efe5e0;
+	--pink: #db1083;
+	--blue: #15a7e0;
+	--border: var(--border-width) solid var(--black);
+	--border-width: 12px;
+	--headheight: 120px;
+	--font-body: "IBM Plex Sans", Roboto, "Segoe UI", Tahoma, sans-serif;
+	--font-headers: Bangers, "IBM Plex Sans", Roboto, "Segoe UI", Tahoma,
+		sans-serif;
+	--letter-spacing-head: 2px;
+	--text-shadow-head-blue: 4px 5px 1px var(--blue);
+	--text-shadow-head-yellow: 4px 5px 1px var(--yellow);
+	--text-shadow-head-pink: 4px 5px 1px var(--pink);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: "IBM Plex Sans", Roboto, 'Segoe UI', Tahoma, sans-serif;
-    font-size: 16pt;
-    border: var(--border);
-    width: calc(100vh - (100vh - 100%));
+	font-family: var(--font-body);
+	font-size: 16pt;
+	border: var(--border);
+	margin: auto;
+	width: calc(100vh - (100vh - 100%) - 2 * var(--border-width));
+	max-width: 1300px;
 }
 
+/* TO DELETE
 div {
-    border: 1px solid red;
+	outline: 1px solid rgba(255, 0, 0, 0.2);
+} */
+
+button {
+	border: unset;
+	/* padding: 0; */
+	/* padding: 4px; */
+	/* padding-bottom: 20px; */
+	min-width: 100px;
+	height: 44px;
+	background: var(--black);
+	box-shadow: 4px 4px 1px var(--pink);
+	border-radius: 8px;
+	color: var(--white);
+	font-family: inherit;
+	font-size: 1em;
+	font-weight: 700;
+	text-align: center;
 }
 
-header {
-    width: 100%;
-    height: var(--headheight);
-    display: inline-grid;
-    grid-template-columns: var(--headheight) 1fr 1fr;
-    justify-items: stretch;
-    align-items: stretch;
-    text-align: left;
+.button-yellow {
+	box-shadow: 4px 4px 1px var(--yellow);
 }
-
-header > div {
-    border: var(--border);
-    vertical-align: middle;
-    display:flex;
-    align-items: left;
-    justify-content: center;
+.button-pink {
+	box-shadow: 4px 4px 1px var(--pink);
 }
-
+.button-blue {
+	box-shadow: 4px 4px 1px var(--blue);
+}
